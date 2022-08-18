@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-4a=71)yni(#5bzr-*j&ceb8+_wt1*z&gdwqu1ljlp%1d(q(v!m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["library.herokuapp.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["ashish-library.herokuapp.com", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -36,7 +36,7 @@ Django_Apps = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'whitenoise.runserver_nostatic',
+    "whitenoise.runserver_nostatic",
     'django.contrib.staticfiles',
 ]
 
@@ -56,9 +56,9 @@ INSTALLED_APPS = Django_Apps + Project_Apps + Third_Party_Apps
 
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -135,7 +135,7 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"] 
 STATIC_ROOT = BASE_DIR / "staticfiles" 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
